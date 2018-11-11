@@ -1,0 +1,40 @@
+[
+    {
+        "name": "bluerhinos/phpmqtt",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/bluerhinos/phpMQTT.git",
+            "reference": "6c15cef0b1b2cb4c438e526c78d805b69a733f9d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/bluerhinos/phpMQTT/zipball/6c15cef0b1b2cb4c438e526c78d805b69a733f9d",
+            "reference": "6c15cef0b1b2cb4c438e526c78d805b69a733f9d",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4"
+        },
+        "time": "2017-10-16 21:14:36",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Bluerhinos\\": "./"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD"
+        ],
+        "authors": [
+            {
+                "name": "Andrew Milsted",
+                "email": "andrew@bluerhinos.co.uk"
+            }
+        ],
+        "description": "Simple MQTT Class"
+    }
+]

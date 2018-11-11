@@ -1,0 +1,14 @@
+version: '3'
+services:
+  telldus_mqtt:
+    build:
+      context: .
+      dockerfile: /.docker/telldus/Dockerfile
+    ports:
+      - "9005:9005"
+    volumes:
+      - /var/www/krokenweb.local/telldus_mqtt/src:/var/www/html/
+      - /src/config:/var/www/html/config/
+      #- ./docker/telldus/php.ini:/usr/local/etc/php/conf.d/php.ini
+      #- ./docker/telldus/php.ini:/usr/local/etc/php/conf.d/php.ini
+    network_mode: host
