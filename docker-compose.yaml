@@ -8,15 +8,11 @@ services:
       - "9005:9005"
       - "16926:16926"
     volumes:
-      #- /var/www/krokenweb.local/telldus_mqtt/src:/var/www/html/
       - /src/config:/var/www/html/config/
-      #- ./docker/telldus/php.ini:/usr/local/etc/php/conf.d/php.ini
-      #- ./docker/telldus/php.ini:/usr/local/etc/php/conf.d/php.ini
     environment:
       - CRON_USER=root
       - CRON_SCHEDULE=* * * * *
       - CRON_COMMAND=/usr/local/bin/php -f /var/www/html/mqtt_push.php
       - APACHE_RUN_USER=www-data
       - APACHE_RUN_GROUP=www-data
-      - CFLAGS=DBIG_SECURITY_HOLE
     network_mode: host
