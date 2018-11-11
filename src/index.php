@@ -246,8 +246,8 @@
 				<?php foreach ($sensors->sensor as $key => $thisDevice): ?>
 
 					<?php
-						$device_name = urlencode(strtolower($thisDevice->name));
-						$topic = $mqtt_conf['client_id']."/sensor/".$device_name."/".$data->name;
+						//$device_name = urlencode(strtolower($thisDevice->name));
+						//$topic = $mqtt_conf['client_id']."/sensor/".$device_name."/".$data->name;
 					?>
 
 					<a class="sensor-row white-box" href="javascript:getSensorData(<?php echo $thisDevice->id; ?>, '<?php echo $mqtt_conf['client_id']; ?>');">
