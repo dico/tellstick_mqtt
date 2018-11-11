@@ -1,8 +1,8 @@
 # Tellstick MQTT
 
-As Home Assistant only supports one Tellstick, I created a MQTT bridge between the Tellstick Local API and MQTT, to get some sensor-values from my second Tellstick into Home Assistant.
+As Home Assistant only supports one Tellstick, I created a bridge between the Tellstick Local API and MQTT, to get some sensor-values from my second Tellstick into Home Assistant.
 
-This service run cron inside container, to fetch and publish values to MQTT.
+This service run cron inside container every minute.
 
 This service auto create MQTT-topics of all sensors. Be aware that there can be issues with sensor-names and non-escaped characters from your Tellstick.
 
