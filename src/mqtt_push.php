@@ -41,7 +41,10 @@ if (isset($tellstick_access_token['token']) && !empty($tellstick_access_token['t
 						$topic = $mqtt_conf['client_id']."/sensor/".$device_name."/".$data->name;
 						echo "$topic - $data->value \n";
 
-						$mqtt->publish($topic, $data->value, 0);
+						$publish = $mqtt->publish($topic, $data->value, 0);
+
+						echo "PUBLISH: $publish \n";
+						echo "---------------------- \n";
 					}
 				} //end-if-sensor-data
 
@@ -49,6 +52,10 @@ if (isset($tellstick_access_token['token']) && !empty($tellstick_access_token['t
 		} // end-if-count-sensors
 
 	} //end-mqtt-connect
+
+	else {
+		echo "COULD NOT CONNECT TO MQTT \n";
+	}
 
 	$mqtt->close();
 } //end-if-tellstick-token
